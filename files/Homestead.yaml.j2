@@ -1,0 +1,39 @@
+---
+ip: "{{ homestead-ip }}"
+memory: {{ homestead-memory }}
+cpus: {{ homestead-cpu }}
+provider: {{ homestead-provider}}
+
+authorize: {{ homestead-public-key }}
+
+{% if homestead-private-keys is defined %}
+keys:
+{% for key in homestead-private-keys %}
+    - {{ key }}
+{% endfor %}
+{% endif %}
+
+folders:
+{% for folder in homestead-folders %}
+    - map: {{ folder.local }}
+      to: {{ folder.remote }}
+{% endfor %}
+
+sites:
+{% for site in homestead-sites %}
+    - map: {{ site.url }}
+      to: {{ site.path }}
+{% endfor %}
+
+databases:
+{% for database in homestead-databases %}
+    - {{ database }}
+{% endfor %}
+
+{% if homestead-ports is defined %}
+ports:
+{% for port in homestead-ports %}
+      - send: {{ port.extern }}
+        to: {{ port.intern }}
+{% endfor %}
+{% endif %}
