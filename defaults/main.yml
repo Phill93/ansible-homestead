@@ -1,24 +1,24 @@
 ---
-  homestead-release: "v7.0.1"
-  homestead-repo: "https://github.com/laravel/homestead.git"
-  homestead-dir: "/Users/{{ ansible_user_id }}/Homestead"
+  homestead_release: "v7.0.1"
+  homestead_repo: "https://github.com/laravel/homestead.git"
+  homestead_dir: "/Users/{{ ansible_user_id }}/Homestead"
 
   # Homestead.yaml
-  homestead-ip: 192.168.10.10
-  homestead-memory: 2048
-  homestead-cpu: 1
-  homestead-provider: virtualbox
-  homestead-public-key: "/Users/{{ ansible_user_id }}/.ssh/id_rsa.pub"
-  #homestead-private-keys:
+  homestead_ip: 192.168.10.10
+  homestead_memory: 2048
+  homestead_cpu: 1
+  homestead_provider: virtualbox
+  homestead_public-key: "/Users/{{ ansible_user_id }}/.ssh/id_rsa.pub"
+  #homestead_private-keys:
   #  - "/Users/{{ ansible_user_id }}/.ssh/id_rsa"
-  homestead-folder:
+  homestead_folder:
     - local: "/Users/{{ ansible_user_id }}/repos/"
       to: /home/vagrant/repos
-  homestead-sites:
+  homestead_sites:
     - url: homestead.test
       path: /home/vagrant/repos
-  homestead-database:
+  homestead_database:
     - homestead
-  #homestead-ports:
+  #homestead_ports:
   # - extern: 50000
   #   intern: 5000

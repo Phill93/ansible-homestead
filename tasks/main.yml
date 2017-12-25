@@ -1,14 +1,14 @@
 ---
   - name: Clone Homestead
     git:
-      repo: "{{ homestead-repo }}"
-      dest: "{{ homestead-dir }}"
-      version: "{{ homestead-release }}"
+      repo: "{{ homestead_repo }}"
+      dest: "{{ homestead_dir }}"
+      version: "{{ homestead_release }}"
 
   - name: Init Homestead
-    shell: bash "{{ homestead-dir }}/init.sh"
+    shell: bash "{{ homestead_dir }}/init.sh"
 
   - name: Create Homestead.yaml
     template:
       src: files/Homestead.yaml.j2
-      dest: "{{ homestead-dir }}/Homestead.yaml"
+      dest: "{{ homestead_dir }}/Homestead.yaml"
