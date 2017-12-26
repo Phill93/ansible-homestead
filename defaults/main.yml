@@ -8,8 +8,8 @@
   homestead_memory: 2048
   homestead_cpu: 1
   homestead_provider: virtualbox
-  homestead_public-key: "/Users/{{ ansible_user_id }}/.ssh/id_rsa.pub"
-  #homestead_private-keys:
+  homestead_public_key: "/Users/{{ ansible_user_id }}/.ssh/id_rsa.pub"
+  #homestead_private_keys:
   #  - "/Users/{{ ansible_user_id }}/.ssh/id_rsa"
   homestead_folder:
     - local: "/Users/{{ ansible_user_id }}/repos/"

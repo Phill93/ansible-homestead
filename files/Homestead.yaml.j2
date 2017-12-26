@@ -4,9 +4,9 @@ memory: {{ homestead_memory }}
 cpus: {{ homestead_cpu }}
 provider: {{ homestead_provider}}
 
-authorize: {{ homestead_public-key }}
+authorize: {{ homestead_public_key }}
 
-{% if homestead_private-keys is defined %}
+{% if homestead_private_keys is defined %}
 keys:
 {% for key in homestead_private-keys %}
     - {{ key }}
