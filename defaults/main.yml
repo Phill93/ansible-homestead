@@ -11,7 +11,7 @@
   homestead_public_key: "/Users/{{ ansible_user_id }}/.ssh/id_rsa.pub"
   #homestead_private_keys:
   #  - "/Users/{{ ansible_user_id }}/.ssh/id_rsa"
-  homestead_folder:
+  homestead_folders:
     - local: "/Users/{{ ansible_user_id }}/repos/"
       to: /home/vagrant/repos
   homestead_sites:
