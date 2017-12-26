@@ -13,7 +13,7 @@
   #  - "/Users/{{ ansible_user_id }}/.ssh/id_rsa"
   homestead_folders:
     - local: "/Users/{{ ansible_user_id }}/repos/"
-      to: /home/vagrant/repos
+      remote: /home/vagrant/repos
   homestead_sites:
     - url: homestead.test
       path: /home/vagrant/repos
