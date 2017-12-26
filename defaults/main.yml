@@ -17,7 +17,7 @@
   homestead_sites:
     - url: homestead.test
       path: /home/vagrant/repos
-  homestead_database:
+  homestead_databases:
     - homestead
   #homestead_ports:
   # - extern: 50000
